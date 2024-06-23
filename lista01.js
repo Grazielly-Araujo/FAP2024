@@ -49,6 +49,7 @@ function func( ){
 /* Exerc. 04 - Uma empresa vai dar um aumento de salário ao seu funcionário. Faça um programa para ler o
 salário do funcionário e o percentual de reajuste. Calcular e escrever o valor do novo salário. */
 
+
 function funca(){
     var cargo = toFix(prompt("Informe o seu cargo de acordo com a legenda abaixo: \r Estagiário = 1 \r Dev. Jr. = 2 \r Dev. Pl. = 3 \r Dev. Sr. = 4 "))
 
@@ -113,6 +114,108 @@ forma: descarta a menor nota e a média é calculada usando as duas maiores nota
 do aluno depende da sua média e é apresentada na tabela abaixo: */
 
 function cao() {
-    
+    var notaVal = parseInt(prompt("Informe a primeira nota: "))
+    var notaVal2 = parseInt(prompt("Informe a segunda nota: "))
+    var notaVal3 = parseInt(prompt("Informe a terceira nota: "))
+
+    var median  
+
+}
+
+/* Exerc. 08 -  Uma organização resolveu dar um aumento de salário aos seus colaboradores e lhe contratam para desenvolver o programa que calculará os reajustes. Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+Salários até R$ 280,00 (incluindo): aumento de 20%
+Salários entre R$ 280,00 e R$ 700,00: aumento de 15%
+Salários entre R$ 700,00 e R$ 1500,00: aumento de 10%
+Salários de R$ 1500,00 em diante: aumento de 5% Após o aumento ser realizado, informe na
+tela:
+O percentual de aumento aplicado;
+O valor do aumento;
+O novo salário, após o aumento. */
+
+function ncao(){
+    var cash = parseInt(prompt("Informe seu Salario: "))
+
+    if (cash <= 280.00) {
+        alert("Aumento aplicado de: 20% \r " + "Valor do aumento: " + cash*0.2 + "\r Salário após Aumento: "+ (cash + (cash*0.2)) )
+    }
+    else if (cash <= 700.00) {
+        alert("Aumento aplicado de: 15% \r " + "Valor do aumento: " + cash*0.15 + "\r Salário após Aumento: "+ (cash + (cash*0.15)) )
+    }
+    else if (cash <= 1500.00) {
+        alert("Aumento aplicado de: 10% \r " + "Valor do aumento: " + cash*0.1 + "\r Salário após Aumento: "+ (cash + (cash*0.1)) )
+    }
+    else {
+        alert("Aumento aplicado de: 5% \r " + "Valor do aumento: " + cash*0.05 + "\r Salário após Aumento: "+ (cash + (cash*0.05)) )
+    }
+}
+
+
+
+
+/* Exerc. 09 - Faça um programa para converter uma temperatura dada em graus Fahrenheit para Graus
+Celcius segundo a seguinte fórmula: TC = (tf -32)*5/9. */
+
+
+
+function fahrenheit() {
+    var tempero = parseInt(prompt("Informe a temperatura atual: \r Fahrenheit (F)"))
+
+
+
+}
+
+
+/* Exerc. 10 -Faça um programa que peça dois números ao usuário e mostre qual o maior e qual o menor. */
+
+function maiorMenor(){
+
+}
+
+
+/* Exerc. 11 - Faça um programa para ler o ano de nascimento de uma pessoa e escrever uma mensagem
+que diga se ela poderá ou não votar este ano (não é necessário considerar o mês em que ela
+nasceu). */
+function nasci(){
+
+var ano = parseInt(prompt("Informe o ano que você nasceu: "))
+}
+
+/* Exerc. 12 - Faça um programa que receba três inteiros e diga qual deles é o maior e qual o menor. */
+
+function qualMaior(){
+
+}
+
+
+/* Exerc. 13 - Faça um programa que recebe um inteiro e diga se é par ou ímpar. */
+
+function parImpar() {
+    var nume = parseInt(prompt("Informe um número: "))
+
+    if( nume%2 === 0){
+        alert(`O número ${nume} é Par`)
+    } else{
+        alert(`O número ${nume} é Impar`)
+    }
+
+}
+
+
+
+
+
+
+/* Exerc. 14 -  Para doar sangue é necessário ter entre 18 e 67 anos. Faça um aplicativo na linguagem
+JavaScript que pergunte a idade de uma pessoa e diga se ela pode doar sangue ou não. Use
+alguns dos operadores lógicos OU (||) e E (&amp;&amp;). */
+
+function doador(){
+    var possoDoar = parseInt(prompt("Informe sua idade: "))
+
+    if (possoDoar >= 18 || possoDoar < 67){
+        alert("Sim! Você pode Doar.")
+    }else{
+        alert("Infelizmente você não pode doar. :( ")
+    }
 }
 
