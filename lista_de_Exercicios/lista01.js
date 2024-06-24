@@ -118,7 +118,7 @@ function cao() {
     var notaVal2 = parseInt(prompt("Informe a segunda nota: "))
     var notaVal3 = parseInt(prompt("Informe a terceira nota: "))
 
-    var median  
+   
 
 }
 
@@ -160,14 +160,25 @@ Celcius segundo a seguinte fórmula: TC = (tf -32)*5/9. */
 function fahrenheit() {
     var tempero = parseInt(prompt("Informe a temperatura atual: \r Fahrenheit (F)"))
 
-
-
+    var tempera = (tempero - 32)*5/9
+    alert(`A temperatura em Graus Celcius é de ${tempera}ºC`)
 }
 
 
 /* Exerc. 10 -Faça um programa que peça dois números ao usuário e mostre qual o maior e qual o menor. */
 
 function maiorMenor(){
+
+    var nu1 = parseInt(prompt("Informe o primeiro número: "))
+    var nu2 = parseInt(prompt("Informe o Segundo número: "))
+
+    if(nu1 > nu2){
+        alert(`O número ${nu1} é maior e o número ${nu2} é menor.`)
+    }
+    else{
+        alert(`O número ${nu2} é maior e o número ${nu1} é menor.`)
+    }
+
 
 }
 
@@ -177,12 +188,49 @@ que diga se ela poderá ou não votar este ano (não é necessário considerar o
 nasceu). */
 function nasci(){
 
-var ano = parseInt(prompt("Informe o ano que você nasceu: "))
+    var ano = parseInt(prompt("Informe o ano que você nasceu: "))
+    var anoAtual = 2024 - ano
+
+    if(anoAtual  < 16 ){
+        alert("Você tem " + anoAtual + " anos, ainda não pode Votar.")
+    }
+    else if (anoAtual < 18 || anoAtual > 65) {
+        alert(`Você tem ${anoAtual} anos, não é obrigado a Votar.`)
+    }
+    else{
+        alert(`Você tem ${anoAtual} anos, Pode Votar!`)
+    }
+
+
 }
 
 /* Exerc. 12 - Faça um programa que receba três inteiros e diga qual deles é o maior e qual o menor. */
 
 function qualMaior(){
+
+    var inteir1 = parseInt(prompt("Informe o primeiro número: "))
+    var inteir2 = parseInt(prompt("Informe o segundo número: "))
+    var inteir3 = parseInt(prompt("Informe o terceiro número: "))
+
+    if(inteir1 > inteir2 && inteir1 > inteir3){
+        alert(`O número ${inteir1} é maior.`)
+    }
+    else if(inteir2 > inteir1 && inteir2 > inteir3){
+        alert(`O número ${inteir2} é maior.`)
+    }
+    else{
+        alert(`O número ${inteir3} é maior.`)
+    }
+
+    if(inteir1 < inteir2 && inteir1 < inteir3){
+        alert(`O número ${inteir1} é menor.`)
+    }
+    else if(inteir2 < inteir1 && inteir2 < inteir3){
+        alert(`O número ${inteir2} é menor.`)
+    }
+    else{
+        alert(`O número ${inteir3} é menor.`)
+    }
 
 }
 
@@ -200,19 +248,14 @@ function parImpar() {
 
 }
 
-
-
-
-
-
-/* Exerc. 14 -  Para doar sangue é necessário ter entre 18 e 67 anos. Faça um aplicativo na linguagem
+/*Exerc. 14 -  Para doar sangue é necessário ter entre 18 e 67 anos. Faça um aplicativo na linguagem
 JavaScript que pergunte a idade de uma pessoa e diga se ela pode doar sangue ou não. Use
-alguns dos operadores lógicos OU (||) e E (&amp;&amp;). */
+alguns dos operadores lógicos OU (||) e E (&amp;&amp;).*/
 
 function doador(){
     var possoDoar = parseInt(prompt("Informe sua idade: "))
 
-    if (possoDoar >= 18 || possoDoar < 67){
+    if (possoDoar >= 18 && possoDoar <= 67){
         alert("Sim! Você pode Doar.")
     }else{
         alert("Infelizmente você não pode doar. :( ")
